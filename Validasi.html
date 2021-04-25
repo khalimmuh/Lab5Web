@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat Form Validasi dengan Javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center><h1>PT FRESENIUS KABI</h1></center>
+	<div class="login">
+		<form action="#" method="POST" onSubmit="validasi()">
+			<div>
+				<label>NIK:</label>
+				<input type="text" name="nik" id="nik" />
+			</div>
+            <div>
+                <label>Nama:</label>
+                <input type="text" name="nama" id="nama" />
+            </div>
+            <div>
+                <label>Jabatan:</label>
+                <input type="text" name="Jabatan" id="Jabatan" />
+            </div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>Alamat:</label>
+				<textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+        var nik = document.getElementById("nik").value;
+		var nama = document.getElementById("nama").value;
+        var Jabatan = document.getElementById("Jabatan").value;
+		var email = document.getElementById("email").value;
+		var alamat = document.getElementById("alamat").value;
+		if (nik != "" && nama != "" && Jabatan != "" && email!="" && alamat !="") {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+</html>
